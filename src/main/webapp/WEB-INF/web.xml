@@ -28,7 +28,7 @@
 	
 	<context-param> 
 	  <param-name>loggingLevel</param-name> 
-	  <param-value>INFO</param-value> 
+	  <param-value>DEBUG</param-value> 
 	</context-param> 
     <!-- Spring的log4j监听器 -->
     <listener>    

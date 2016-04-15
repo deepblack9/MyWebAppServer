@@ -38,5 +38,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    <input type="hidden" name="_method" value="DELETE">
 	    <input type="submit" value="delete">
 	</form>
+	<form action="user/error" method="post">
+	    <input type="submit" value="error">
+	</form>
   </body>
 </html>
