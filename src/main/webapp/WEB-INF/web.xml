@@ -20,7 +20,7 @@
 	  <param-value>classpath:log4j.xml</param-value> 
 	</context-param> 
 	
-	<!-- 配置log4j.xml变量 --> 
+	<!-- 配置log4j.xml变量
 	<context-param> 
 	  <param-name>rootLevel</param-name> 
 	  <param-value>DEBUG</param-value> 
@@ -28,8 +28,9 @@
 	
 	<context-param> 
 	  <param-name>loggingLevel</param-name> 
-	  <param-value>DEBUG</param-value> 
-	</context-param> 
+	  <param-value>INFO</param-value> 
+	</context-param>
+	 --> 
     <!-- Spring的log4j监听器 -->
     <listener>    
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>    

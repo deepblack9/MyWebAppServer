@@ -2,34 +2,29 @@ package com.bruce.platform.controller;
 
 import java.util.List;
 
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.bruce.platform.base.mapper.BaseMapper;
 import com.bruce.platform.base.service.impl.BaseServiceImpl;
 import com.bruce.platform.model.SysUser;
 
-@Controller
+@RestController
 @RequestMapping("/user")
 public class SysUserController {
     
 //	@Resource 
 //    private SysUserServiceImpl SysUserServiceImpl;
-	@Resource 
+	@Autowired
     private BaseServiceImpl<SysUser, String> baseServiceImpl;
 	
-    @ResponseBody
     @RequestMapping(value="/user")
     public List<SysUser> getAll() {
     	return baseServiceImpl.getAll();
     }
     
-    @ResponseBody
     @RequestMapping(value="/user/{id}",method=RequestMethod.GET)
     public SysUser get(@PathVariable("id") String id){
     	return baseServiceImpl.selectByPrimaryKey(id);
